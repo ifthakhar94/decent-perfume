@@ -1,17 +1,19 @@
 import Link from "next/link";
 import { StoreHomeCarousel } from "@/components/storefront/store-home-carousel";
+import { StoreHomeCategoryCarousel } from "@/components/storefront/store-home-category-carousel";
 import { StoreHomeProducts } from "@/components/storefront/store-home-products";
 import { storeRoutes } from "@/lib/routes/store";
 
 /**
- * Storefront home: full-width hero carousel + optional footer strip.
+ * Storefront home: hero carousel, category rail, featured products, sign-in strip.
  */
 export function StoreHomeHero() {
   return (
-    <div className="flex flex-1 flex-col">
+    <div className="flex min-w-0 flex-1 flex-col">
       <section aria-label="Featured stories" className="w-full">
         <StoreHomeCarousel />
       </section>
+      <StoreHomeCategoryCarousel />
       <StoreHomeProducts />
       <div className="text-perfume-ink-muted px-4 py-8 text-center text-sm font-medium">
         Already know what you need?{" "}

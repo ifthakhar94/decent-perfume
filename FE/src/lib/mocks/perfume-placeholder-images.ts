@@ -23,3 +23,11 @@ export const PERFUME_HERO_PEXELS_POOL = PEXELS_HERO_IDS.map((id) =>
 export const PERFUME_PRODUCT_PEXELS_POOL = PEXELS_PRODUCT_IDS.map((id) =>
   pexelsPlaceholderUrl(id, 800),
 );
+
+const PEXELS_CATEGORY_IDS = [
+  3373736, 4960257, 8460236, 1763075, 7262897, 4041392, 3781696, 2635394,
+] as const;
+
+export const CATEGORY_CAROUSEL_PEXELS_POOL = PEXELS_CATEGORY_IDS.map((id) =>
+  pexelsPlaceholderUrl(id, 560),
+);

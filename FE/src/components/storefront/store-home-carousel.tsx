@@ -32,7 +32,7 @@ const navBtnClass =
  */
 export function StoreHomeCarousel() {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full max-w-full min-w-0">
       <Swiper
         className="hero-swiper w-full"
         modules={[A11y, Autoplay, EffectFade, Keyboard, Navigation, Pagination]}
@@ -65,7 +65,7 @@ export function StoreHomeCarousel() {
             >
               <Image
                 src={slide.imageUrl}
-                alt=""
+                alt={`${slide.title} — featured at Decent Perfume`}
                 fill
                 priority={index === 0}
                 sizes="100vw"

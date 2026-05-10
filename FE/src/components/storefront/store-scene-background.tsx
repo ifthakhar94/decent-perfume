@@ -10,11 +10,11 @@ export function StoreSceneBackground() {
         aria-hidden
       />
       <div
-        className="pointer-events-none fixed top-16 -left-24 -z-10 h-80 w-80 rounded-full bg-rose-500/25 blur-3xl"
+        className="pointer-events-none fixed top-16 left-0 -z-10 h-72 w-72 -translate-x-1/3 rounded-full bg-rose-500/25 blur-3xl sm:h-80 sm:w-80 sm:-translate-x-1/4"
         aria-hidden
       />
       <div
-        className="pointer-events-none fixed -right-16 bottom-8 -z-10 h-96 w-96 rounded-full bg-amber-400/35 blur-3xl"
+        className="pointer-events-none fixed right-0 bottom-8 -z-10 h-80 w-80 translate-x-1/3 rounded-full bg-amber-400/35 blur-3xl sm:h-96 sm:w-96 sm:translate-x-1/4"
         aria-hidden
       />
       <div

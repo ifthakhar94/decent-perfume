@@ -15,7 +15,7 @@ export function StoreHomeProducts() {
   return (
     <section
       aria-labelledby="store-home-products-heading"
-      className="w-full px-4 py-12 sm:px-6 md:py-16 lg:px-10"
+      className="w-full min-w-0 px-3 py-12 sm:px-6 md:py-16 lg:px-10"
     >
       <div className="mx-auto max-w-7xl">
         <div className="mb-8 text-center md:mb-10">
@@ -42,7 +42,7 @@ export function StoreHomeProducts() {
                   <div className="bg-perfume-blush/80 relative aspect-[5/3] w-full overflow-hidden">
                     <Image
                       src={product.imageUrl}
-                      alt=""
+                      alt={`${product.name}, ${product.concentration}`}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-cover transition duration-500 group-hover:scale-[1.04]"
