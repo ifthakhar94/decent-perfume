@@ -11,7 +11,7 @@
 
 The dashboard area is a **coming soon** variant of the same shell:
 
-- Section label “Dashboard” and merchant-oriented headline/subtitle from **RTK Query** (`getComingSoonCopy` with section `"dashboard"`).
+- Section label “Dashboard” and merchant-oriented headline/subtitle from **RTK Query** (`getDashboardComingSoonCopy`).
 - Link back to the **storefront teaser** at `/` for quick navigation during development.
 
 ## Data / state
@@ -28,5 +28,5 @@ The dashboard area is a **coming soon** variant of the same shell:
 ## Related files
 
 - Page entry: `src/app/dashboard/page.tsx`
-- UI: `src/components/coming-soon/ComingSoonPage.tsx` (`section="dashboard"`)
+- UI: `src/components/coming-soon/ComingSoonPage.tsx`
 - Design notes: `docs/features/design-system-glassmorphism.md`

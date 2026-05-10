@@ -39,3 +39,48 @@ body {
   background-attachment: fixed;
   color: var(--foreground);
 }
+
+/* Swiper hero — custom Hugeicon nav (no default arrow pseudo-elements), bullets, Ken Burns */
+.hero-swiper .swiper-button-prev,
+.hero-swiper .swiper-button-next {
+  display: none;
+}
+
+.hero-swiper .swiper-pagination {
+  bottom: 1.35rem !important;
+}
+
+.hero-swiper .swiper-pagination-bullet {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: rgb(255 255 255 / 0.45);
+  opacity: 1;
+  transition:
+    width 0.3s ease,
+    background 0.3s ease,
+    border-radius 0.3s ease;
+}
+
+.hero-swiper .swiper-pagination-bullet-active {
+  width: 1.75rem;
+  border-radius: 0.375rem;
+  background: #fff;
+}
+
+.hero-swiper .swiper-pagination-bullet-active-main {
+  background: #fff;
+}
+
+/* Slow zoom on the visible slide */
+.hero-swiper .swiper-slide-active .hero-slide-bg {
+  animation: hero-swiper-kenburns 14s ease-out forwards;
+}
+
+@keyframes hero-swiper-kenburns {
+  from {
+    transform: scale(1.12);
+  }
+  to {
+    transform: scale(1);
+  }
+}

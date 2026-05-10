@@ -63,5 +63,5 @@ Ant Design tokens in `AntdThemeProvider` use **wine** primary (`#6b2f3c`), **bro
 
 - Tokens + body wash: `src/app/globals.css`
 - Scene orbs: `src/components/storefront/store-scene-background.tsx`
-- Glass surfaces: `src/components/coming-soon/ComingSoonPage.tsx`, `src/components/storefront/site-header/site-header.tsx`
+- Glass surfaces: `src/components/storefront/store-home-hero.tsx`, `store-home-carousel.tsx` (hero scrim + CTA), `src/components/coming-soon/ComingSoonPage.tsx` (dashboard), `src/components/storefront/site-header/site-header.tsx`
 - Ant Design theme: `src/components/providers/AntdThemeProvider.tsx`
