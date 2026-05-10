@@ -1,0 +1,13 @@
+{
+  "name": "decent-perfume",
+  "private": true,
+  "description": "Repo root — Next.js app and tooling live in FE/",
+  "scripts": {
+    "dev": "npm run dev --prefix FE",
+    "build": "npm run build --prefix FE",
+    "start": "npm run start --prefix FE",
+    "lint": "npm run lint --prefix FE",
+    "format": "npm run format --prefix FE",
+    "format:check": "npm run format:check --prefix FE"
+  }
+}
