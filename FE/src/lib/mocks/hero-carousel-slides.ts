@@ -1,5 +1,7 @@
 import { faker } from "@faker-js/faker";
 
+import { PERFUME_HERO_PEXELS_POOL } from "@/lib/mocks/perfume-placeholder-images";
+
 export type HeroCarouselSlide = {
   id: string;
   title: string;
@@ -10,22 +12,6 @@ export type HeroCarouselSlide = {
 };
 
 /**
- * Curated Unsplash URLs (perfume, bottles, florals). Faker has no category-specific
- * photo API since LoremFlickr was deprecated; we combine a fixed pool with
- * `faker.helpers.shuffle` so order stays deterministic for a given seed.
- */
-const PERFUME_HERO_IMAGE_POOL = [
-  "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1920&q=85",
-  "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=1920&q=85",
-  "https://images.unsplash.com/photo-1615634260168-28791d6f106e?auto=format&fit=crop&w=1920&q=85",
-  "https://images.unsplash.com/photo-1587017539500-33b358d20e12?auto=format&fit=crop&w=1920&q=85",
-  "https://images.unsplash.com/photo-1592945403244-b3fbafd7b539?auto=format&fit=crop&w=1920&q=85",
-  "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1920&q=85",
-  "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1920&q=85",
-  "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1920&q=85",
-] as const;
-
-/**
  * Builds hero carousel slides with Faker. Module-level export uses a fixed seed
  * so slides are stable between builds; change the seed to refresh mock content.
  * Replace image pool with CMS/asset URLs when the backend is ready.
@@ -34,7 +20,7 @@ export function buildHeroCarouselSlides(count = 5): HeroCarouselSlide[] {
   faker.seed(42_024_2026);
 
   const imageAssignments = faker.helpers
-    .shuffle([...PERFUME_HERO_IMAGE_POOL])
+    .shuffle([...PERFUME_HERO_PEXELS_POOL])
     .slice(0, count);
 
   return Array.from({ length: count }, (_, i) => ({

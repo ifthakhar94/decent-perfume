@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { StoreHomeCarousel } from "@/components/storefront/store-home-carousel";
+import { StoreHomeProducts } from "@/components/storefront/store-home-products";
 import { storeRoutes } from "@/lib/routes/store";
 
 /**
@@ -11,6 +12,7 @@ export function StoreHomeHero() {
       <section aria-label="Featured stories" className="w-full">
         <StoreHomeCarousel />
       </section>
+      <StoreHomeProducts />
       <div className="text-perfume-ink-muted px-4 py-8 text-center text-sm font-medium">
         Already know what you need?{" "}
         <Link
