@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/*
+ * Luxury fragrance retail palette (research-informed):
+ * warm cream/blush grounds, wine/burgundy primary, antique gold accents, warm ink type.
+ * Avoid dominant electric violet/fuchsia — reads “generic SaaS”, not boutique perfumery.
+ */
+:root {
+  --background: #faf6f1;
+  --foreground: #26191c;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-syne), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono);
+  /* Semantic tokens — use e.g. text-perfume-ink, bg-perfume-wine */
+  --color-perfume-ink: #26191c;
+  --color-perfume-ink-muted: #5c4e52;
+  --color-perfume-body: #44403c;
+  --color-perfume-wine: #6b2f3c;
+  --color-perfume-wine-hover: #5a2832;
+  --color-perfume-bordeaux: #4a1f28;
+  --color-perfume-gold: #8a6240;
+  --color-perfume-gold-light: #b8956a;
+  --color-perfume-blush: #f3e8e6;
+  --color-perfume-cream: #faf6f1;
+}
+
+body {
+  background: linear-gradient(
+    165deg,
+    #faf6f1 0%,
+    #f5ebe8 32%,
+    #efe3db 68%,
+    #e8d9cf 100%
+  );
+  background-attachment: fixed;
+  color: var(--foreground);
+}
