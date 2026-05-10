@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+# Runs before `git push`. Requires: git config core.hooksPath .githooks (from repo root)
+set -e
+ROOT="$(git rev-parse --show-toplevel)"
+FE_DIR="$ROOT/FE"
+if [ ! -f "$FE_DIR/package.json" ]; then
+  echo "pre-push: FE/package.json not found; skipping build."
+  exit 0
+fi
+cd "$FE_DIR"
+echo "pre-push: FE — format:check, lint, build"
+npm run format:check
+npm run lint
+npm run build
+echo "pre-push: OK"
