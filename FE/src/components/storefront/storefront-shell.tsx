@@ -1,4 +1,5 @@
 import { SiteHeader } from "@/components/storefront/site-header/site-header";
+import { StorefrontFooter } from "@/components/storefront/storefront-footer";
 import { StoreSceneBackground } from "@/components/storefront/store-scene-background";
 
 type StorefrontShellProps = {
@@ -6,7 +7,7 @@ type StorefrontShellProps = {
 };
 
 /**
- * Layout shell for the customer-facing site: scene + sticky header + main landmark.
+ * Layout shell for the customer-facing site: scene + sticky header + main + footer.
  */
 export function StorefrontShell({ children }: StorefrontShellProps) {
   return (
@@ -19,6 +20,7 @@ export function StorefrontShell({ children }: StorefrontShellProps) {
       >
         {children}
       </main>
+      <StorefrontFooter />
     </div>
   );
 }
