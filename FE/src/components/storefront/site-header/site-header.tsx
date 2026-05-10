@@ -118,7 +118,7 @@ export function SiteHeader() {
         label: <Link href={storeRoutes.orders}>Orders</Link>,
       },
       {
-        key: "wishlist",
+        key: "wishlists",
         label: <Link href={storeRoutes.wishlist}>Wishlist</Link>,
       },
       { type: "divider" },
