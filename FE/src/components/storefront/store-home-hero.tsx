@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { StoreHomeCarousel } from "@/components/storefront/store-home-carousel";
 import { StoreHomeCategoryCarousel } from "@/components/storefront/store-home-category-carousel";
+import { StoreHomeCustomerReviews } from "@/components/storefront/store-home-customer-reviews";
 import { StoreHomeProducts } from "@/components/storefront/store-home-products";
 import { storeRoutes } from "@/lib/routes/store";
 
 /**
- * Storefront home: hero carousel, category rail, featured products, sign-in strip.
+ * Storefront home: hero, categories, products, customer reviews, sign-in strip.
  */
 export function StoreHomeHero() {
   return (
@@ -15,6 +16,7 @@ export function StoreHomeHero() {
       </section>
       <StoreHomeCategoryCarousel />
       <StoreHomeProducts />
+      <StoreHomeCustomerReviews />
       <div className="text-perfume-ink-muted px-4 py-8 text-center text-sm font-medium">
         Already know what you need?{" "}
         <Link

@@ -34,7 +34,13 @@ Storefront routes live under the **`(store)` route group** with `StorefrontShell
 - **Show more** → `storeRoutes.shop`.
 - Product images: **`alt`** = name + concentration.
 
-### 4. Sign-in strip
+### 4. Customer reviews (`StoreHomeCustomerReviews`)
+
+- Responsive **1 / 2 / 3** column grid of glass review cards under products.
+- **Data:** `src/lib/mocks/storefront-customer-reviews.ts` (`@faker-js/faker`, seeded) — name, rating, title, body, ISO date.
+- **A11y:** star row exposes **`aria-label`**; **`cite`** + **`time`** in footer.
+
+### 5. Sign-in strip
 
 - Links to **`storeRoutes.login`**.
 
@@ -58,8 +64,8 @@ Storefront routes live under the **`(store)` route group** with `StorefrontShell
 - Root SEO defaults: `src/app/layout.tsx`
 - Home metadata: `src/app/(store)/page.tsx`
 - Shell: `src/app/(store)/layout.tsx`
-- Components: `store-home-hero.tsx`, `store-home-carousel.tsx`, `store-home-category-carousel.tsx`, `store-home-products.tsx`
-- Mocks: `hero-carousel-slides.ts`, `storefront-category-carousel.ts`, `storefront-products.ts`, `perfume-placeholder-images.ts`
+- Components: `store-home-hero.tsx`, `store-home-carousel.tsx`, `store-home-category-carousel.tsx`, `store-home-products.tsx`, `store-home-customer-reviews.tsx`
+- Mocks: `hero-carousel-slides.ts`, `storefront-category-carousel.ts`, `storefront-products.ts`, `storefront-customer-reviews.ts`, `perfume-placeholder-images.ts`
 - Routes: `src/lib/routes/store.ts`
 - Header: `site-header/site-header.tsx`
 - Docs: **`storefront-seo.md`**, `design-system-glassmorphism.md`, `storefront-site-header.md`
